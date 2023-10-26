@@ -1,7 +1,13 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+
+interface RouteParams {
+  coidId: string;
+}
 
 const Coin = () => {
-  return <div>Coin</div>;
+  const { coidId } = useParams<RouteParams>();
+  return <div>Coin:{coidId}</div>;
 };
 
 export default Coin;
